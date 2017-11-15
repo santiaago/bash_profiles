@@ -49,3 +49,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # added by Anaconda3 5.0.0 installer
 #export PATH="/Users/client/anaconda3/bin:$PATH"
 export EDITOR="emacs"
+
+# switch docker envs
+alias swmini='eval $(minikube docker-env)'
+alias swdocker='eval $(docker-machine env -u)'
