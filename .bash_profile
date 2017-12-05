@@ -8,6 +8,11 @@ parse_git_branch() {
 # Make Git branch a variable
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
 # Custom bash prompt
 #
 # Includes custom character for the prompt, path, and Git branch name.
